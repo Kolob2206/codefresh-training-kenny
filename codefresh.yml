@@ -42,7 +42,7 @@ wordsBuild:
       image_name: words
       tag: latest
 
-wordsBuild:
+wordsBuild2:
     title: Building Web
     type: build
     working_directory: /web/
