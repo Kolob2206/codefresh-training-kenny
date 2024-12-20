@@ -18,7 +18,7 @@ steps:
   unitTestWeb:
     title: Unit Testing Web
     type: freestyle
-    working_directory: /web/
+    working_directory: IMAGE_WORK_DIR
     arguments:
       image: golang
       commands:
@@ -27,7 +27,7 @@ steps:
   dbBuild:
     title: Building Database
     type: build
-    working_directory: /db/
+    working_directory: IMAGE_WORK_DIR
     arguments:
       registry: nginx-octodocker
       image_name: db
@@ -36,7 +36,7 @@ steps:
   wordsBuild:
     title: Building Words
     type: build
-    working_directory: /words/
+    working_directory: IMAGE_WORK_DIR
     arguments:
       registry: nginx-octodocker
       image_name: words
@@ -45,7 +45,7 @@ steps:
   wordsBuild2:
     title: Building Web
     type: build
-    working_directory: /web/
+    working_directory: IMAGE_WORK_DIR
     arguments:
       registry: nginx-octodocker
       image_name: web
