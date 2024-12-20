@@ -29,7 +29,7 @@ steps:
     type: build
     working_directory: /db/
     arguments:
-      registry:
+      registry: nginx-octodocker
       image_name: db
       tag: latest
   
@@ -38,7 +38,7 @@ steps:
     type: build
     working_directory: /words/
     arguments:
-      registry:
+      registry: nginx-octodocker
       image_name: words
       tag: latest
   
@@ -47,6 +47,6 @@ steps:
     type: build
     working_directory: /web/
     arguments:
-      registry:
+      registry: nginx-octodocker
       image_name: web
       tag: latest
