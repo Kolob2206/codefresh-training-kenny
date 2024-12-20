@@ -11,9 +11,9 @@ steps:
     title: Cloning repository
     type: git-clone
     arguments:
-    git: github-kenny
-    repo: codefresh-support/interview
-    revision: main
+      git: github-kenny
+      repo: codefresh-support/interview
+      revision: main
 
   unitTestWeb:
     title: Unit Testing Web
