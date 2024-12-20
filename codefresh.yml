@@ -10,6 +10,7 @@ steps:
   sourceClone:
     title: Cloning repository
     type: git-clone
+    stage: SOURCE
     arguments:
       git: github-kenny
       repo: codefresh-support/interview
@@ -18,6 +19,7 @@ steps:
   unitTestWeb:
     title: Unit Testing Web
     type: freestyle
+    stage: TEST
     working_directory: IMAGE_WORK_DIR
     arguments:
       image: golang
@@ -27,6 +29,7 @@ steps:
   dbBuild:
     title: Building Database
     type: build
+    stage: BUILD
     working_directory: IMAGE_WORK_DIR
     arguments:
       registry: nginx-octodocker
@@ -36,6 +39,7 @@ steps:
   wordsBuild:
     title: Building Words
     type: build
+    stage: BUILD
     working_directory: IMAGE_WORK_DIR
     arguments:
       registry: nginx-octodocker
@@ -45,6 +49,7 @@ steps:
   wordsBuild2:
     title: Building Web
     type: build
+    stage: BUILD
     working_directory: IMAGE_WORK_DIR
     arguments:
       registry: nginx-octodocker
