@@ -25,13 +25,13 @@ steps:
         - gofmt dispatcher.go
 
 dbBuild:
-    title: Building Database
-    type: build
-    working_directory: /db/
-    arguments:
-      registry:
-      image_name: db
-      tag: latest
+  title: Building Database
+  type: build
+  working_directory: /db/
+  arguments:
+    registry:
+    image_name: db
+    tag: latest
 
 wordsBuild:
   title: Building Words
