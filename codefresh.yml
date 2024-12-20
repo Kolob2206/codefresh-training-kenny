@@ -33,7 +33,7 @@ dbBuild:
       image_name: db
       tag: latest
 
-  wordsBuild
+  wordsBuild:
     title: Building Words
     type: build
     working_directory: /words/
