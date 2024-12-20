@@ -11,7 +11,7 @@ steps:
     title: Cloning repository
     type: git-clone
     arguments:
-    git: github
+    git: github-kenny
     repo: codefresh-support/interview
     revision: main
 
