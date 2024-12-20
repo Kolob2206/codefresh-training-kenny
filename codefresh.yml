@@ -1,0 +1,52 @@
+version: "1.0"
+
+stages:
+  - "SOURCE"
+  - "TEST"
+  - "BUILD"
+
+steps:
+
+  sourceClone:
+    title: Cloning repository
+    type: git-clone
+    arguments:
+    git: github
+    repo: codefresh-support/interview
+    revision: main
+
+  unitTestWeb:
+    title: Unit Testing Web
+    type: freestyle
+    working_directory: /web/
+    arguments:
+      image: golang
+      commands:
+        - gofmt dispatcher.go
+
+dbBuild:
+    title: Building Database
+    type: build
+    working_directory: /db/
+    arguments:
+      registry:
+      image_name: db
+      tag: latest
+
+  wordsBuild
+    title: Building Words
+    type: build
+    working_directory: /words/
+    arguments:
+      registry:
+      image_name: words
+      tag: latest
+
+  wordsBuild:
+    title: Building Web
+    type: build
+    working_directory: /web/
+    arguments:
+      registry:
+      image_name: web
+      tag: latest

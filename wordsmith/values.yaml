@@ -1,0 +1,4 @@
+db: dockersamples/k8s-wordsmith-db
+web: dockersamples/k8s-wordsmith-web
+words: dockersamples/k8s-wordsmith-api
+
